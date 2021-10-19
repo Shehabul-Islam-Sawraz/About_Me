@@ -1,0 +1,256 @@
+*{
+	box-sizing: content-box;
+}
+body{
+    background-image: url(..//images/bg-body.jpg);
+}
+
+header {
+    position: relative;
+    overflow: visible;
+}
+
+#container{
+	margin: 0 auto;
+	width: 860px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+#profile{
+	margin-top: 50px;
+    background: #2ec1db;
+    background-image: url(../images/header-shadow.png);
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+
+.about{
+    float: left;
+    margin-top: 30px;
+    width: 490px;
+    margin-left: 20px;
+}
+
+.about .profile-pic{
+    float: left;
+    background: url(..//images/photo-inner3.png) no-repeat;
+    width: 112px;
+    height: 113px;
+    padding: 12px 0 0 19px;
+    border-radius: 80px;
+}
+
+.about .profile-pic img{
+	margin-left: -51px;
+    margin-top: -14px;
+    height: 127px;
+    border-radius: 13px;
+}
+
+.about h2 {
+	font-weight: 700;
+	color: #FFF;
+	line-height: 34px;
+	margin-top: 8px;
+}
+
+.about h3 {
+	margin-top: 5px;
+	font-size: 18px;
+	color: #FFF;
+	line-height: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.about p {
+	font-size: 15px;
+    margin-top: -10px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.personal-info {
+	float: left;
+	margin-top: 30px;
+	width: 310px;
+	min-height: 230px;
+	margin-left: -5px;
+	background: url(../images/personal-info-sep.png) no-repeat left top;
+	padding: 20px 0 0 20px;
+}
+
+.personal-info li {
+	font-size: 14px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.personal-info li label {
+	color:#fff;
+	float: left;
+	padding: 4px 7px;
+	font-weight: 600;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.personal-info li span {
+	float: right;
+	width: 220px;
+	padding-top: 4px;
+	font-weight: 300;
+	color:#fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+span.social-text {
+    position: absolute;
+    right: 0px;
+    color: #fff;
+    padding: 2px 9px;
+    font-size: 22px;
+    cursor: pointer;
+    top: 10px;
+    border-radius: 66px;
+    /* height: 30px; */
+}
+
+i.fas.fa-share {
+    color: #fff !important;
+    padding-left: 3px;
+}
+
+ul.social-icons {
+    opacity: 0;
+    top: -1px;
+    position: relative;
+    transition: all ease 1s;
+    z-index: -1;
+    left: -7px;
+}
+
+.pulse-button {
+    position: relative;
+    width: 30px;
+    height: 35px;
+    line-height: 15px;
+    border: none;
+    box-shadow: 0 0 0 0 rgb(101, 100, 100);    
+    background-color: #2ec1db;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.menu {
+	height: 100px;
+	background-color: #ededed;
+	position: relative;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+.tabs {
+	height: 116px;
+	position: absolute;
+	margin-top: -14px;
+	z-index: 100;
+}
+
+.tabs li{
+	display: inline;
+	float: left;
+}
+
+.tabs li > a {
+    padding-top: 28px;
+    width: 115px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: #b9b9b9;
+    text-align: center;
+    font-weight: 580;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 35px;
+    text-decoration: none;
+	margin-right: 35px;
+}
+
+a.tab-profile.active {
+	background: url('../images/tab-hover.png') no-repeat;
+	color: #2ec1db;
+}
+
+.tabs li.active a {
+	color:#2ec1db;
+}
+
+a.tab-profile.active i {
+    animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-0px);}
+	60% {-webkit-transform: translateY(-10px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-0px);}
+	60% {-moz-transform: translateY(-10px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-0px);}
+	60% {-o-transform: translateY(-10px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-0px);}
+	60% {transform: translateY(-10px);}
+}
+
+
+.tabs li > a > i {
+	font-size: 45px;
+	font-family: 'icomoon';
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+
+#logo{
+	float: left;
+	overflow: hidden;
+	margin-left: 10px;
+	display: none;
+}
+
+#logo h2 {
+	font-size: 30px;
+	font-weight: 900;
+	color: #444;
+	line-height: 40px;
+}
+
+#logo h4 {
+	color: #666;
+	line-height: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.pulse-button{
+	margin-top: 50px;
+}
