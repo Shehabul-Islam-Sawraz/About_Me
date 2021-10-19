@@ -186,7 +186,7 @@ ul.social-icons {
 	margin-right: 35px;
 }
 
-a.tab-profile.active {
+.tabs li.active{
 	background: url('../images/tab-hover.png') no-repeat;
 	color: #2ec1db;
 }
