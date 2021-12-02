@@ -22,7 +22,6 @@ header {
 }
 
 #profile{
-	margin-top: 50px;
     background: #2ec1db;
     background-image: url(../images/header-shadow.png);
     background-position: center bottom;
@@ -254,7 +253,4 @@ a.tab-profile.active i {
 	color: #666;
 	line-height: 20px;
     font-family: 'Roboto Condensed', sans-serif;
-}
-.pulse-button{
-	margin-top: 50px;
 }

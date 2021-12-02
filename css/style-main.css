@@ -2,6 +2,9 @@ header {
     position: relative;
     overflow: visible;
 }
+a, a:hover{
+    text-decoration: none;
+}
  
 button:focus {
     outline: 0px dotted;
@@ -585,4 +588,95 @@ button#green-color {
 .form-control:focus {
     border-color: #2ec1db;
     box-shadow: 0 0 0 0rem rgba(0,123,255,.25);
+}
+
+/* Portfolio Section */
+
+/*-------------------------------------------------------*/
+#portfolio {
+	padding: 20px 20px 20px 20px;
+}
+
+/* Images list */
+#portfolio-list {
+	width: 820px;
+	overflow: hidden;
+}
+
+#portfolio-list li {
+	float: left;
+	margin-right: 25px;
+	text-align: center;
+	background-color: #fbfbfb;
+	border-bottom: 1px solid #e5e5e5;
+	height: 185px;
+	margin-bottom: 30px;
+	width: 180px;
+}
+
+#portfolio-list li:hover {
+	border-bottom: 3px solid #2ec1db;
+	height: 185px;
+}
+
+#portfolio-list img {
+	background-color: #FFF;
+	height: 120px;
+	width: fit-content;
+}
+
+#portfolio-list li:hover .title {
+	color:#2ec1db;
+}
+
+#portfolio-list li .title {
+	font-size: 14px;
+	margin-top: 15px;
+	font-weight: 400;
+	color: #3A3A3A;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+#portfolio-list li .category {
+	font-size: 11px;
+	line-height: 25px;
+	color: #999;
+}
+
+/* Filter menu */
+.cats-filter {
+	border-bottom: 1px solid #ededed;
+	overflow: hidden;
+	padding: 15px 0;
+}
+
+.cats-filter li a {
+	float: left;
+	margin-right: 7px;
+	color: #fff;
+	background-color: #666;
+	padding: 6px;
+	margin-bottom: 5px;
+    font-size: 13px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.cats-filter li a:hover {
+	background-color:#2ec1db;
+}
+
+.cats-filter li a.current {
+	background-color:#2ec1db;
+}
+
+/*-------------------------------------------------------*/
+
+.extra-text{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333 !important;
 }

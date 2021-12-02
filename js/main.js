@@ -58,15 +58,15 @@ jQuery(document).ready(function(){
 	var $content 		= $("#content");
 	
 	// Run easytabs
-  	$content.easytabs({
-	  animate			: true,
-	  updateHash		: false,
-	  transitionIn		:'slideDown',
-	  transitionOut		:'slideUp',
-	  animationSpeed	:600,
-	  tabs				:".tmenu",
-	  tabActiveClass	:'active',
-	});
+	$content.easytabs({
+		animate			: true,
+		updateHash		: false,
+		transitionIn		:'slideDown',
+		transitionOut		:'slideUp',
+		animationSpeed	:600,
+		tabs				:".tmenu",
+		tabActiveClass	:'active',
+	  });
 
 	
 	// Hover menu effect
@@ -79,7 +79,7 @@ jQuery(document).ready(function(){
 	);
 
 	// Menu Navigation
-	 $(".menu .tabs").carouFredSel({
+	$(".menu .tabs").carouFredSel({
         responsive          : true,
         direction           : "left",
  	    circular: false,
@@ -110,4 +110,48 @@ jQuery(document).ready(function(){
             }
         }           
     });
+
+	/*	Cats Filter
+	/* ---------------------------------------------------------------------- */ 
+	
+	var $catsfilter 		= $('.cats-filter');
+
+	// Copy categories to item classes
+	$catsfilter.find('a').click(function() {
+		var currentOption = $(this).attr('data-filter');
+		$(this).parent().parent().find('a').removeClass('current');
+		$(this).addClass('current');
+	});	
+
+	/* ---------------------------------------------------------------------- */
+	/*	Portfolio
+	/* ---------------------------------------------------------------------- */ 
+	
+	// Needed variables
+	var $plist	 	= $('#portfolio-list');
+	var $pfilter 		= $('#portfolio-filter');
+		
+	// Run Isotope  
+	$plist.isotope({
+		filter				: '*',
+		layoutMode   		: 'masonry',
+		animationOptions	: {
+		duration			: 750,
+		easing				: 'linear'
+	   }
+	});	
+	
+	// Isotope Filter 
+	$pfilter.find('a').click(function(){
+	  var selector = $(this).attr('data-filter');
+		$plist.isotope({ 
+		filter				: selector,
+		animationOptions	: {
+		duration			: 750,
+		easing				: 'linear',
+		queue				: false,
+	   }
+	  });
+	  return false;
+	});	 
 });	
