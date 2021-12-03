@@ -43,10 +43,63 @@ jQuery(document).ready(function(){
 
 
 	$(document).ready(function(){
-		$(".socials-text").click(function(){
-			$(".socialicons").toggleClass("main");
+		$(".social-text").click(function(){
+			$(".social-icons").toggleClass("main");
 		});
 	});
+
+	/* ---------------------------------------------------------------------- */
+	/*	Resume
+	/* ---------------------------------------------------------------------- */
+	
+	// Rating bars
+	$(".skills li .rating").each(function(index,e) { 
+
+		// Vars
+		var 
+			$ratNum = 7,
+			$rat = $(e).attr("data-rat"),
+			$point = "<span></span>";
+
+		// Append points
+		while($ratNum > 0){
+		     $(e).append($point);
+		     $ratNum--;
+		}
+
+		$(e).find("span").each(function(index,e) { 
+			if(index >= $rat) return false;
+			// Append Disabled Rats
+			$(e).animate({
+			    opacity: 1
+			  });
+		});
+
+    });
+
+
+	/* ---------------------------------------------------------------------- */
+	/*	About
+	/* ---------------------------------------------------------------------- */
+	
+	// Profile Photo Slider
+	$(".photo-inner ul").carouFredSel({
+        direction           : "left",
+ 	    circular: true,
+        auto    			: true,
+        scroll 			: {
+            items           : 1,
+            fx 				: 'crossfade',
+            duration        : 1500,                        
+            wipe    		: true
+        },
+	    swipe: {
+	        onTouch: true
+	    },
+        items: {
+            width: 153
+        }           
+    });
 
 
 	 
