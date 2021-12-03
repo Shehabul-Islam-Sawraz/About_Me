@@ -353,6 +353,7 @@ a.tab-profile.active i {
 
 .setborder{
 	border-radius: 6px;
+	cursor: pointer;
 }
 
 @-webkit-keyframes bounce {
@@ -413,6 +414,10 @@ a.tab-profile.active i {
 	float: right;
 	margin-top: 18px;
     padding-bottom: 18px;
+}
+
+.social-icons:hover{
+	cursor: pointer;
 }
 
 .social-icons li {
